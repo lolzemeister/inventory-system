@@ -6,3 +6,10 @@ CREATE TABLE product (
     selling_price DECIMAL(10, 2) NOT NULL,
     stock_quantity INT NOT NULL,
 )
+
+CREATE TABLE category (
+    category_id INT,
+    category_name VARCHAR(100),
+
+    PRIMARY KEY (category_id)
+)

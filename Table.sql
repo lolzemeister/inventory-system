@@ -21,3 +21,13 @@ CREATE TABLE sale_item (
     quantity INT NOT NULL,
     unit_price DECIMAL(10, 2) NOT NULL
 )
+
+CREATE TABLE supplier (
+    supplier_id INT,
+    supplier_name VARCHAR(100),
+    contact_email VARCHAR(100),
+    contact_phone VARCHAR(15),
+    website_url VARCHAR(100),
+
+    PRIMARY KEY (supplier_id)
+)

@@ -13,3 +13,11 @@ CREATE TABLE category (
 
     PRIMARY KEY (category_id)
 )
+
+CREATE TABLE sale_item (
+    sale_item_id INT PRIMARY KEY,
+    sale_id INT,
+    product_id INT,
+    quantity INT NOT NULL,
+    unit_price DECIMAL(10, 2) NOT NULL
+)

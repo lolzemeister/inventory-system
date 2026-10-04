@@ -13,3 +13,13 @@ CREATE TABLE category (
 
     PRIMARY KEY (category_id)
 )
+
+CREATE TABLE supplier (
+    supplier_id INT,
+    supplier_name VARCHAR(100),
+    contact_email VARCHAR(100),
+    contact_phone VARCHAR(15),
+    website_url VARCHAR(100),
+
+    PRIMARY KEY (supplier_id)
+)

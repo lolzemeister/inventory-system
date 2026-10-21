@@ -168,3 +168,4 @@ INSERT INTO sale_item (sale_item_id, sale_id, product_id, quantity, unit_price) 
 
     INSERT INTO inventory ( inventory_id, inventory_name, total_quantity_in_stock, total_inventory_sales, total_inventory_value, total_revenue, total_expenses) VALUES
     (1, 'Main Store Inventory', 500, 35, 1500, 2000, 1000);
+    

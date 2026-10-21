@@ -58,3 +58,14 @@ CREATE TABLE supplier (
 
     PRIMARY KEY (supplier_id)
 )
+
+CREATE TABLE stock_receipt_item (
+    stock_receipt_item_id INT PRIMARY KEY,
+    stock_receipt_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    unit_cost DECIMAL(10, 2) NOT NULL
+
+    FOREIGN KEY (stock_receipt_id) REFERENCES stock_receipt(stock_receipt_id),
+    FOREIGN KEY (product_id) REFERENCES product(product_id)
+)

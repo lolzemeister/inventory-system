@@ -21,34 +21,34 @@ INSERT INTO supplier (supplier_id, supplier_name, contact_email, contact_phone, 
     (4, 'Victoria Candy & Bakery Supply', 'orders@candy.example', NULL, NULL),
     (5, 'West Coast General Merchandise', NULL, '250-555-0105', NULL);
 
-INSERT INTO category (category_id, category_name) VALUES
-    (1, 'Chips & Savoury Snacks'),
-    (2, 'Drinks, Coffee & Tea'),
-    (3, 'Ice Cream & Frozen Treats'),
-    (4, 'Candy, Chocolate & Cookies'),
-    (5, 'Lottery & Convenience Essentials');
+INSERT INTO category (category_id, category_name, category_total_sales) VALUES
+    (1, 'Chips & Savoury Snacks', 0),
+    (2, 'Drinks, Coffee & Tea', 1),
+    (3, 'Ice Cream & Frozen Treats', 2),
+    (4, 'Candy, Chocolate & Cookies', 3),
+    (5, 'Lottery & Convenience Essentials', 0);
 
-INSERT INTO product (product_id, product_name, supplier_id, category_id, selling_price, stock_quantity) VALUES
-    (1, 'Classic Potato Chips 200 g', 1, 1, 3.49, 61),
-    (2, 'Nacho Cheese Tortilla Chips 235 g', 1, 1, 3.99, 103),
-    (3, 'Salted Pretzels 150 g', 1, 1, 2.49, 86),
-    (4, 'Butter Popcorn 100 g', 1, 1, 3.49, 53),
-    (5, 'Cola 500 mL', 2, 2, 2.99, 16),
-    (6, 'Fresh Brewed Coffee 12 oz', 2, 2, 2.49, 10),
-    (7, 'Blue Raspberry Slushie 16 oz', 2, 2, 3.49, 0),
-    (8, 'Black Tea 12 oz', 2, 2, 1.99, 7),
-    (9, 'Vanilla Ice Cream Bar', 3, 3, 3.49, 36),
-    (10, 'Chocolate Ice Cream Cone', 3, 3, 4.49, 3),
-    (11, 'Strawberry Ice Cream Cup', 3, 3, 3.99, 12),
-    (12, 'Ice Cream Sandwich', 3, 3, 2.99, 1),
-    (13, 'Gummy Bears 150 g', 4, 4, 3.49, 35),
-    (14, 'Milk Chocolate Bar 45 g', 4, 4, 2.49, 3),
-    (15, 'Sour Candy 120 g', 4, 4, 3.99, 7),
-    (16, 'Chocolate Chip Cookies 6-Pack', 4, 4, 4.99, 2),
-    (17, 'Scratch Lottery Ticket - $5', 5, 5, 5.00, 9),
-    (18, 'Pocket Notebook', 5, 5, 3.49, 25),
-    (19, 'Pencil Pack - 4 Count', 5, 5, 2.49, 15),
-    (20, 'USB Flash Drive 32 GB', 5, 5, 12.99, 0);
+INSERT INTO product (product_id, product_name, supplier_id, category_id, selling_price, product_stock_quantity, total_product_sales) VALUES
+    (1, 'Classic Potato Chips 200 g', 1, 1, 3.49, 61, 0),
+    (2, 'Nacho Cheese Tortilla Chips 235 g', 1, 1, 3.99, 103, 0),
+    (3, 'Salted Pretzels 150 g', 1, 1, 2.49, 86, 0),
+    (4, 'Butter Popcorn 100 g', 1, 1, 3.49, 53, 0),
+    (5, 'Cola 500 mL', 2, 2, 2.99, 16, 0),
+    (6, 'Fresh Brewed Coffee 12 oz', 2, 2, 2.49, 10, 0),
+    (7, 'Blue Raspberry Slushie 16 oz', 2, 2, 3.49, 0, 0),
+    (8, 'Black Tea 12 oz', 2, 2, 1.99, 7, 0),
+    (9, 'Vanilla Ice Cream Bar', 3, 3, 3.49, 36, 0),
+    (10, 'Chocolate Ice Cream Cone', 3, 3, 4.49, 3, 0),
+    (11, 'Strawberry Ice Cream Cup', 3, 3, 3.99, 12, 0),
+    (12, 'Ice Cream Sandwich', 3, 3, 2.99, 1, 0),
+    (13, 'Gummy Bears 150 g', 4, 4, 3.49, 61, 0),
+    (14, 'Milk Chocolate Bar 100 g', 4, 4, 2.49, 6, 0),
+    (15, 'Assorted Candy Mix 200 g', 4, 4, 3.99, 10, 0),
+    (16, 'Chocolate Chip Cookies 6-Pack', 4, 4, 4.99, 2, 0),
+    (17, 'Scratch Lottery Ticket - $5', 5, 5, 5.00, 9, 0),
+    (18, 'Pocket Notebook', 5, 5, 3.49, 25, 0),
+    (19, 'Pencil Pack - 4 Count', 5, 5, 2.49, 15, 0),
+    (20, 'USB Flash Drive 32 GB', 5, 5, 12.99, 0, 0);
 
 INSERT INTO stock_receipt (stock_receipt_id, receipt_date, supplier_id, total_cost) VALUES
     (1, '2026-09-01 09:00:00', 1, 393.50),
@@ -165,3 +165,6 @@ INSERT INTO sale_item (sale_item_id, sale_id, product_id, quantity, unit_price) 
     (46, 15, 15, 2, 3.99),
     (47, 15, 16, 1, 4.99),
     (48, 15, 13, 3, 3.49);
+
+    INSERT INTO inventory ( inventory_id, inventory_name, total_quantity_in_stock, total_inventory_sales, total_inventory_value, total_revenue, total_expenses) VALUES
+    (1, 'Main Store Inventory', 500, 35, 1500, 2000, 1000);

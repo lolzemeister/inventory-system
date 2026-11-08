@@ -59,4 +59,14 @@ CREATE TABLE stock_receipt_item (
 
     FOREIGN KEY (stock_receipt_id) REFERENCES stock_receipt(stock_receipt_id),
     FOREIGN KEY (product_id) REFERENCES product(product_id)
-)
+);
+
+CREATE TABLE inventory (
+    inventory_id INT PRIMARY KEY,
+    inventory_name VARCHAR(100),
+    total_quantity_in_stock INT NOT NULL,
+    total_inventory_sales INT NOT NULL,
+    total_inventory_value DECIMAL(10,2) NOT NULL,
+    total_revenue DECIMAL(10,2) NOT NULL,
+    total_expenses DECIMAL(10,2) NOT NULL
+);

@@ -28,7 +28,7 @@ INSERT INTO category (category_id, category_name, category_total_sales) VALUES
     (4, 'Candy, Chocolate & Cookies', 3),
     (5, 'Lottery & Convenience Essentials', 0);
 
-INSERT INTO product (product_id, product_name, supplier_id, category_id, selling_price, product_stock_quantity, total_product_sales) VALUES
+INSERT INTO product (product_id, product_name, supplier_id, category_id, selling_price, stock_quantity, total_product_sales) VALUES
     (1, 'Classic Potato Chips 200 g', 1, 1, 3.49, 61, 0),
     (2, 'Nacho Cheese Tortilla Chips 235 g', 1, 1, 3.99, 103, 0),
     (3, 'Salted Pretzels 150 g', 1, 1, 2.49, 86, 0),
